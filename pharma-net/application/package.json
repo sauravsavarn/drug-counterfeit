@@ -1,0 +1,29 @@
+{
+  "name": "pharma_network",
+  "version": "1.0.0",
+  "description": "NodeJS Application Accessing the Distributed Drug-Counterfeit Pharma Chaincode Solution over Fabric Network",
+  "main": "index.js",
+  "scripts": {
+    "installDependencies": "npm install",
+    "test": "rm -rf identity && node index.js",
+    "identityAddAll": "rm -rf identity && node 1_addToWallet_manufacturer.js && node 2_addToWallet_distributor.js && node 3_addToWallet_transporter.js && node 4_addToWallet_retailer.js && node 5_addToWallet_consumer.js",
+    "identityAdd-manufacturer": "rm -rf identity && node 1_addToWallet_manufacturer.js",
+    "identityAdd-distributor": "rm -rf identity && node 2_addToWallet_distributor.js",
+    "identityAdd-transporter": "rm -rf identity && node 3_addToWallet_transporter.js",
+    "identityAdd-retailer": "rm -rf identity && node 4_addToWallet_retailer.js",
+    "identityAdd-consumer": "rm -rf identity && node 5_addToWallet_consumer.js"
+  },
+  "author": "Saurav Savarn",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "fabric-client": "~1.4.4",
+    "fabric-network": "~1.4.4",
+    "js-yaml": "^3.12.0",
+    "path": "^0.12.7",
+    "pug": "^2.0.4"
+  },
+  "devDependencies": {
+    "eslint": "^5.6.0"
+  }
+}
